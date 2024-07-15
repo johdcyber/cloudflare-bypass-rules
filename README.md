@@ -52,22 +52,18 @@ https://api.cloudflare.com/client/v4/zones/<Your-Zone-ID>/firewall/rules
 API Calls
 1. Create a Firewall Rule (Example for XSS)
 POST Request
-
-bash
-Copy code
+```
 POST https://api.cloudflare.com/client/v4/zones/<Your-Zone-ID>/firewall/rules
 Headers
 
-json
-Copy code
+```
 {
     "Authorization": "Bearer <Your-API-Token>",
     "Content-Type": "application/json"
 }
 Body
-
-json
-Copy code
+```
+```
 {
     "description": "Block XSS Attacks",
     "filter": {
@@ -75,25 +71,22 @@ Copy code
     },
     "action": "block"
 }
+```
 2. Create a Rule in Log Mode
 To observe the impact of the rule without blocking:
 POST Request
-
-bash
-Copy code
+```
 POST https://api.cloudflare.com/client/v4/zones/<Your-Zone-ID>/firewall/rules
 Headers
-
-json
-Copy code
+```
+```
 {
     "Authorization": "Bearer <Your-API-Token>",
     "Content-Type": "application/json"
 }
+```
 Body
-
-json
-Copy code
+```
 {
     "description": "Log XSS Attacks",
     "filter": {
@@ -103,36 +96,28 @@ Copy code
 }
 3. List All Firewall Rules
 GET Request
-
-bash
-Copy code
+```
 GET https://api.cloudflare.com/client/v4/zones/<Your-Zone-ID>/firewall/rules
 Headers
-
-json
-Copy code
+```
+```
 {
     "Authorization": "Bearer <Your-API-Token>",
     "Content-Type": "application/json"
 }
+```
 4. Update an Existing Firewall Rule
 PUT Request
-
-ruby
-Copy code
+```
 PUT https://api.cloudflare.com/client/v4/zones/<Your-Zone-ID>/firewall/rules/<Rule-ID>
 Headers
-
-json
-Copy code
 {
     "Authorization": "Bearer <Your-API-Token>",
     "Content-Type": "application/json"
 }
+```
 Body
-
-json
-Copy code
+```
 {
     "description": "Block XSS Attacks",
     "filter": {
@@ -140,24 +125,22 @@ Copy code
     },
     "action": "block"
 }
+```
 5. Delete a Firewall Rule
 DELETE Request
-
-ruby
-Copy code
+```
 DELETE https://api.cloudflare.com/client/v4/zones/<Your-Zone-ID>/firewall/rules/<Rule-ID>
 Headers
-
-json
-Copy code
+```
+```
 {
     "Authorization": "Bearer <Your-API-Token>",
     "Content-Type": "application/json"
 }
 Example Rules in JSON Payloads
+```
 Reflected XSS (RXSS)
-json
-Copy code
+```
 {
     "description": "Block RXSS Attacks",
     "filter": {
@@ -165,9 +148,9 @@ Copy code
     },
     "action": "block"
 }
+```
 SQL Injection (SQLi)
-json
-Copy code
+```
 {
     "description": "Block SQLi Attacks",
     "filter": {
@@ -175,9 +158,9 @@ Copy code
     },
     "action": "block"
 }
+```
 Remote Code Execution (RCE)
-json
-Copy code
+```
 {
     "description": "Block RCE Attacks",
     "filter": {
@@ -185,7 +168,7 @@ Copy code
     },
     "action": "block"
 }
-
+```
 
 
 ## Source List
