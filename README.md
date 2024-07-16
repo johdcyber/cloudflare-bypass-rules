@@ -1,9 +1,3 @@
-
-# Cloudflare Firewall Rules for Security Bypasses By John D Cyber.
-
-Overview
-This document outlines a set of Cloudflare firewall rules designed to mitigate various security bypass attempts such as Cross-Site Scripting (XSS), SQL Injection (SQLi), and Remote Code Execution (RCE). Security engineers can use these rules to enhance the security of their web applications by blocking common attack patterns.
-
 # Cloudflare Firewall Rules for Security Bypasses
 
 ## Overview
